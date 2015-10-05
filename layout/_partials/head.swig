@@ -14,6 +14,10 @@
   <meta name="google-site-verification" content="{{ theme.google_site_verification }}" />
 {% endif %}
 
+{% if theme.baidu_site_verification %}
+  <meta name="baidu-site-verification" content="{{ theme.baidu_site_verification }}" />
+{% endif %}
+
 {% if theme.qihu_site_verification %}
   <meta name="360-site-verification" content="{{ theme.qihu_site_verification }}" />
 {% endif %}
@@ -28,7 +32,17 @@
 
 <link rel="stylesheet" type="text/css" href="{{ url_for(theme.css) }}/main.css?v={{ theme.version }}"/>
 
+<<<<<<< HEAD
 {% if page.tags and page.tags.length %}
+=======
+{% if config.description %}
+    <meta name="description" content="{{ config.description }}" />
+{% endif %}
+
+{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}" />
+{% elif page.tags and page.tags.length %}
+>>>>>>> iissnan/master
   <meta name="keywords" content="{% for tag in page.tags %}{{ tag.name }},{% endfor %}" />
 {% elif theme.keywords %}
   <meta name="keywords" content="{{ theme.keywords }}" />

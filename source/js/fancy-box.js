@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   $('.content img').each(function () {
     var $image = $(this);
 
@@ -14,9 +15,10 @@ $(document).ready(function() {
       $imageWrapLink = $image.wrap('<a href="' + this.getAttribute('src') + '"></a>').parent('a');
     }
     $imageWrapLink.addClass('fancybox');
-    if(this.title){
-      $imageWrapLink.attr("title",this.title); //make sure img title tag will show correctly in fancybox
-    }
+    if ($image.attr("alt")) {
+      $imageWrapLink.append('<div class="pic-title"><span>' + $image.attr("alt") + '</span></div>');
+      $imageWrapLink.attr("title",$image.attr("alt")); //make sure img title tag will show correctly in fancybox
+    };
   });
 });
 $('.fancybox').fancybox({
@@ -26,3 +28,5 @@ $('.fancybox').fancybox({
     }
   }
 });
+
+
