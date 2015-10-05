@@ -5,6 +5,17 @@
     <span class="btn-bar"></span>
   </button>
 </div>
+<script>
+   $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    if (scroll >= 100) {
+        $(".site-nav").addClass("fade-out");
+    } else {
+        $(".site-nav").removeClass("fade-out");
+    }
+}); 
+</script>
+    
 
 <nav class="site-nav">
   {% set hasSearch = theme.swiftype_key || theme.tinysou_Key %}
