@@ -105,6 +105,6 @@ images: images
 version: 0.4.5.1
 
 # Social sharing
-jiathis: true
+jiathis: false
 
 swiftype_key: QeHtBnDaxF-gAE_HkMTY
