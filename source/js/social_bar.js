@@ -129,5 +129,4 @@
     }
   })
 
-
 })(window, window.document, window.qrcode)
