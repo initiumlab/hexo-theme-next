@@ -20,7 +20,7 @@
       "The 50-50-90 rule: Anytime you have a 50-50 chance of getting something right, there's a 90% probability you'll get it wrong.",
       "It is a capital mistake to theorize before one has data. Insensibly one begins to twist facts to suit theories, instead of theories to suit facts.",
       "The plural of anecdote is not data.",
-      "Absence of evidence is not evidence of absence.",
+      "Absence of proof is not proof of absence.",
       "The plural of anecdote is not data.",
       "Math is a language that you use to describe statistics, but really it's about collecting information and putting it in an order that makes sense.",
       "It always takes longer than you expect, even when you take into account Hofstadter's Law. — Hofstadter's Law",
