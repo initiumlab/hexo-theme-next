@@ -94,12 +94,12 @@
     }
   };
 
-  configLightbox('legco');
-  configLightbox('wasted');
-  configLightbox('media-tech');
-  configLightbox('database');
-  configLightbox('salary360');
-  configLightbox('designCollection');
+  var showcaseAnchors = document.getElementsByClassName('showcase-anchor')
+  var projectCode
+  for (i = 0; i < showcaseAnchors.length; i += 1) {
+    projectCode = showcaseAnchors[i].dataset.projectcode
+    configLightbox(projectCode)
+  }
 
   // Open lightbox if location includes hashtags pointing to a case
   var hash = window.location.hash;
