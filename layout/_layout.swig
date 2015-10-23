@@ -12,7 +12,6 @@
 <body itemscope itemtype="http://schema.org/WebPage" lang="{{ config.language }}">
 
   {% include '_partials/old-browsers.swig' %}
-  {% include '_scripts/analytics.swig' %}
 
   <div class="container one-column {% block page_class %}{% endblock %}">
     <div class="headband"></div>
@@ -89,6 +88,8 @@
   {% block comment_system %}{% endblock %}
   {% include '_scripts/baidushare.swig' %}
 
+  {% include '_scripts/analytics.swig' %}
+
   {# LazyLoad #}
   <script type="text/javascript" src="{{ url_for(theme.js) }}/lazyload.js"></script>
   <script type="text/javascript">
@@ -98,16 +99,6 @@
         effect: "fadeIn"
       });
     });
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-66625644-1', 'auto');
-    ga('send', 'pageview');
-
   </script>
 </body>
 </html>
