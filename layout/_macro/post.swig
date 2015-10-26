@@ -38,7 +38,19 @@
         </div>
 
         <div class="post-name">
-          <p>{{post.author}}</p>
+          <p class="author-info">
+          {% for author in post.author %}
+             
+              {% if author.url %}
+                <a href={{author.url}}>
+                  <span>{{author.name}}</span>
+                </a>
+              {% else %}
+                <span>{{author.name}}</span>
+              {% endif %}
+
+          {% endfor %}
+          </p>
         </div>
 
         <div class='post-tags'>
