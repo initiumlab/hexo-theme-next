@@ -1,3 +1,5 @@
+<footer id='page-footer-placeholder'>
+</footer>
 <footer id='page-footer'>
     <div id="mc_embed_signup">
       <form action=""
