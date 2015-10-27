@@ -79,8 +79,6 @@
       window.currentLightbox = lightbox;
       document.title = currentLightbox.getElementsByTagName('h1')[0].textContent + " | Initium Lab"
 
-      getLightboxTitle();
-
       ga('send', 'event', 'lightbox', 'open', lightbox.id);
 
     });
