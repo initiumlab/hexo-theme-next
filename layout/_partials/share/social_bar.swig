@@ -1,5 +1,3 @@
-{% include "../../_scripts/social_sharing.swig" %}
-
 <div class='socialBar'>
   <button data-platform='facebook'
           class='btnSocialShare'>

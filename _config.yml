@@ -106,5 +106,6 @@ version: 0.4.5.1
 
 # Social sharing
 jiathis: false
+social_bar: true
 
 swiftype_key: QeHtBnDaxF-gAE_HkMTY

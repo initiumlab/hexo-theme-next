@@ -42,6 +42,7 @@
   }
 
   function handleShareButtonClick (event) {
+    
     var chosenPlatform = event.target.dataset.platform
     var shareTitle,
         shareDescription = ''
