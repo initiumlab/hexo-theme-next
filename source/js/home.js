@@ -58,6 +58,8 @@
     window.history.pushState("", document.title, window.location.pathname + window.location.search);
     console.log(lightbox)
 
+    document.title = "Initium Lab"
+
     ga('send', 'event', 'lightbox', 'close', lightbox.id);
   }
 
@@ -75,6 +77,9 @@
       document.body.classList.add('no-scroll');
       window.location.hash = event.target.parentNode.id.replace('anchor-', '');
       window.currentLightbox = lightbox;
+      document.title = currentLightbox.getElementsByTagName('h1')[0].textContent + " | Initium Lab"
+
+      getLightboxTitle();
 
       ga('send', 'event', 'lightbox', 'open', lightbox.id);
 
@@ -112,6 +117,7 @@
         lightbox.style.display = 'block';
         document.body.classList.add('no-scroll');
         window.currentLightbox = lightbox;
+        document.title = currentLightbox.getElementsByTagName('h1')[0].textContent + "| Initium Lab"
 
         ga('send', 'event', 'lightbox', 'url-direct-open', lightbox.id);
       }
