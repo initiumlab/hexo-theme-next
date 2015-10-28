@@ -181,7 +181,7 @@ $(document).ready(function () {
 
 // Create offset shadow anchors for incoming references, to compensate for the fixed header.
 
-(function(){
+function addShadowAnchors () {
   var realHeadings = document.querySelectorAll('h2'); // Use querySelector to get static list, to avoid infinite loop.
   var header = document.getElementsByClassName('site-nav')[0];
   var headerHeight = Number(header.offsetHeight);
@@ -197,12 +197,31 @@ $(document).ready(function () {
     shadowAnchor.style.position = 'relative';
     shadowAnchor.style.top = '-' + (headerHeight * 1.5) + 'px';
     shadowAnchor.visibility = 'hidden';
+    shadowAnchor.className = 'shadow-anchor';
 
     heading.removeAttribute('id');
 
     heading.parentNode.insertBefore(shadowAnchor, heading);
   }
-}());
+}
+
+function removeShadowAnchors () {
+  "use strict";
+  var shadowAnchors = document.querySelectorAll('shadow-anchor');
+  var i, anchor;
+  for (i = 0; i < shadowAnchors.length; i += 1) {
+    anchor = shadowAnchors[i];
+    anchor.parentNode.removeChild(anchor);
+  }
+}
+
+addShadowAnchors()
+
+// When the window is resized, re-position the shadow anchors
+window.addEventListener('resize', function () {
+  removeShadowAnchors();
+  addShadowAnchors();
+})
 
 // Add click-to-play for videos
 (function() {

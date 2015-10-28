@@ -109,7 +109,7 @@ section#works {
 .caseHeading:hover{
   cursor: pointer;
   background-color: #333;
-  color: white; 
+  color: white;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -172,7 +172,7 @@ section#blogs {
 #moreBlogs:hover {
   cursor: pointer;
   background-color: #333;
-  color: white; 
+  color: white;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -182,11 +182,17 @@ section#blogs {
 
 /*blog part 3 end /////////////////////*/
 
+#page-footer-placeholder,
 #page-footer {
   height: 15em;
   width: 100%;
-  background-color: #EEE;
   padding-top: 3em;
+}
+
+#page-footer {
+  background-color: #EEE;
+  position: absolute;
+  bottom: 0;
 }
 
 #mce-EMAIL {
@@ -234,7 +240,7 @@ div.clear {
 #mc_embed_signup_scroll .clear input:hover {
   cursor: pointer;
   background-color: #31afbe;
-  color: white; 
+  color: white;
   transition: all 0.3s ease-in-out 0s;
 }
 
@@ -400,6 +406,26 @@ div.clear {
   padding-top: 0;
 }
 
+.btnSocialShare {
+  width: 40px;
+  height: 40px;
+  background-color: #31afbe;
+  border: 1px solid #000;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btnSocialShare img {
+  width: 100%;
+}
+
+.btnSocialShare:hover{
+  background-color: #42ebff;
+}
+
+.socialBar {
+  margin-bottom: 40px;
+}
 
 @media screen and (max-width: 1024px) {
 
@@ -428,7 +454,7 @@ div.clear {
 
     #blogs {
       padding-left: 3em;
-      padding-right: 3em;    
+      padding-right: 3em;
     }
 
     #works .subtitle {
@@ -494,9 +520,18 @@ div.clear {
       margin-left: 0;
     }
 
-    .lightbox img {
+    .lightbox .imageBox img {
       width: auto;
       max-width: none;
+    }
+
+    /* Hide the hamburger button and always show navigation bar */
+    .site-nav-toggle {
+      display: none;
+    }
+
+    .site-nav {
+      display: block;
     }
 
 }

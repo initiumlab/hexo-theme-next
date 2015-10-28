@@ -2,10 +2,11 @@
 
   <article class="post post-type-{{ post.type | default('normal') }} {{ post_extra_class | default('') }}" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-
-      <img src="{{post.thumbnail}}" alt="thumbnail for the page"
-           class="thumbnail no-fancy"
-           style="visibility: hidden; width: 1px; height: 1px; margin: 0" />
+      <div style="display: none">
+        <img src="{{post.thumbnail}}" alt="thumbnail for the page"
+             class="thumbnail no-fancy"
+             style="visibility: hidden; width: 1px; height: 1px; margin: 0;" />
+      </div>
 
       {# Not to show title for quote posts that do not have a title #}
       {% if not (is_index and post.type === 'quote' and not post.title) %}
@@ -37,7 +38,19 @@
         </div>
 
         <div class="post-name">
-          <p>{{post.author}}</p>
+          <p class="author-info">
+          {% for author in post.author %}
+             
+              {% if author.url %}
+                <a href={{author.url}}>
+                  <span>{{author.name}}</span>
+                </a>
+              {% else %}
+                <span>{{author.name}}</span>
+              {% endif %}
+
+          {% endfor %}
+          </p>
         </div>
 
         <div class='post-tags'>
