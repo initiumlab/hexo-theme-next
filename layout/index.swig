@@ -34,7 +34,9 @@
       </div>
       {% for post in page.posts %}
         {% if post.language == 'en' %}
-          {{ post_template.render(post, true) }}
+          {% if (Date.now() - post.date < 7776000000) %}
+            {{ post_template.render(post, true) }}          
+          {% endif %}
         {% endif %}
       {% endfor %}
     </section>
