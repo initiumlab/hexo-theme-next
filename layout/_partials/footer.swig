@@ -17,7 +17,7 @@
           <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg"></div>
           <div id='subscriptionNotice'></div>
           <a id="hiringLink" href="/recruitment"><div id="hiring">We're Hiring! Join Us!</div></a>
-          <div id="rssButton">© Initium Lab. All rights reserved 2015. <a href="/blog/feed.xml"><span id="rssText">&nbsp; RSS &nbsp; &nbsp; </span></a></div>
+          <div id="rssButton">© Initium Lab. All rights reserved 2015. <a id="rssTextLink" href="/blog/feed.xml"><span id="rssText">&nbsp; RSS &nbsp; &nbsp; </span></a></div>
           <div><a href="http://theinitium.com/">Initium Media</a></div>
         </div>
       </form>
