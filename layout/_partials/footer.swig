@@ -16,6 +16,7 @@
           </div>
           <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-success btn-lg"></div>
           <div id='subscriptionNotice'></div>
+          <a href="/hiring"><div id="hiring">We're hiring</div></a>
           <div id="rssButton">© Initium Lab. All rights reserved 2015. <a href="/blog/feed.xml"><span id="rssText">&nbsp; RSS &nbsp; &nbsp; </span></a></div>
           <div><a href="http://theinitium.com/">Initium Media</a></div>
         </div>
