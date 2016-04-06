@@ -33,11 +33,9 @@
         >> Recent blogs
       </div>
       {% for post in page.posts %}
-        {% if post.language == 'en' %}
           {% if (Date.now() - post.date < 7776000000) %}
             {{ post_template.render(post, true) }}          
           {% endif %}
-        {% endif %}
       {% endfor %}
     </section>
   </div>
