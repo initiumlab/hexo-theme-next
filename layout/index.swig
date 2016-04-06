@@ -33,7 +33,7 @@
         >> Recent blogs
       </div>
       {% for post in page.posts %}
-          {% if (Date.now() - post.date < 7776000000) %}
+          {% if (Date.now() - post.date < 15552000000) %}
             {{ post_template.render(post, true) }}          
           {% endif %}
       {% endfor %}
